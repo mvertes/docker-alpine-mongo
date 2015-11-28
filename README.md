@@ -1,8 +1,7 @@
 # docker-alpine-mongo
 
-This repository contains Dockerfile for [MongoDB](https://www.mongodb.org) container.
-
-It is based on the [Alpine](https://hub.docker.com/_/alpine/) image.
+This repository contains Dockerfile for [MongoDB](https://www.mongodb.org) container,
+based on the [Alpine](https://hub.docker.com/_/alpine/) image.
 
 ## Install
 
