@@ -1,0 +1,6 @@
+#!/bin/sh
+[ "$1" = "mongod" ] ||  exec "$@" || exit $?
+
+chown -R mongodb /data/db
+cmd="exec $@"
+exec su -s /bin/sh -c "$cmd" mongodb
