@@ -34,6 +34,6 @@ Or to connect a local mongo client:
 
 ## Limitations
 
-- On MacOSX, volumes located in a shared folder are not supported,
-  due to a limitation of virtualbox (default docker-machine driver)
-  not supporting fsync().
+- On MacOSX, volumes located in a virtualbox shared folder are not
+  supported, due to a limitation of virtualbox (default docker-machine
+  driver) not supporting fsync().
