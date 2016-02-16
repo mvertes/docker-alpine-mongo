@@ -28,11 +28,11 @@ database activity in real-time:
 
 	$ docker exec -ti mongo mongosniff
 
-Or to connect a local mongo client:
-
-	$ docker exec -ti mongo mongo
 
 ## Limitations
+
+- mongo shell in release 3.2.1 is currently broken on alpine-linux, do not
+  use it.
 
 - On MacOSX, volumes located in a virtualbox shared folder are not
   supported, due to a limitation of virtualbox (default docker-machine
