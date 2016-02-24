@@ -1,10 +1,10 @@
-VERSION = 3.2.1
+VERSION = 3.2.3
 IMAGE = mvertes/alpine-mongo:$(VERSION)
 
 all:
 
 image:
-	docker build -t $(IMAGE) .
+	docker build -t $(IMAGE) --no-cache .
 
 publish:
 	docker push $(IMAGE)
