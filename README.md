@@ -23,14 +23,29 @@ To run `mongod`:
 
 	$ docker run -d --name mongo -p 27017:27017 mvertes/alpine-mongo
 
+You can also specify the database repository where to store the data
+with the volume -v option:
+
+    $ docker run -d --name mongo -p 27017:27017 \
+	  -v /somewhere/onmyhost/mydatabase:/data/db \
+	  mvertes/alpine-mongo
+
 Now, on the same host where the mongodb container is running, to trace
-database activity in real-time:
+database network activity in real-time:
 
 	$ docker exec -ti mongo mongosniff
 
-To use the mongo shell:
+To run a shell session:
+
+    $ docker exec -ti mong sh
+
+To use the mongo shell client:
 
 	$ docker exec -ti mongo mongo
+
+The mongo shell client can also be run its own container: 
+
+	$ docker run -ti --rm --name mongoshell monogo host:port/db
 
 ## Limitations
 
