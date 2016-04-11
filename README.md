@@ -37,7 +37,7 @@ database network activity in real-time:
 
 To run a shell session:
 
-    $ docker exec -ti mong sh
+    $ docker exec -ti mongo sh
 
 To use the mongo shell client:
 
