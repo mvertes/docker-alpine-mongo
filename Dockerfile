@@ -1,4 +1,4 @@
-From alpine:edge
+FROM alpine:edge
 
 ADD run /
 ADD https://raw.githubusercontent.com/mvertes/dosu/0.1.0/dosu /sbin/
