@@ -1,9 +1,9 @@
 # docker-alpine-mongo
 
 This repository contains Dockerfile for [MongoDB 3.2](https://www.mongodb.org)
-container, based on the [Alpine 3.3](https://hub.docker.com/_/alpine/) image.
+container, based on the [Alpine edge](https://hub.docker.com/_/alpine/) image.
 
-Why ? the official mongo image size: 317 MB, alpine-mongo: 133 MB
+Why ? the official mongo image size: 317 MB, alpine-mongo: 78 MB
 
 ## Install
 
@@ -29,11 +29,6 @@ with the volume -v option:
     $ docker run -d --name mongo -p 27017:27017 \
 	  -v /somewhere/onmyhost/mydatabase:/data/db \
 	  mvertes/alpine-mongo
-
-Now, on the same host where the mongodb container is running, to trace
-database network activity in real-time:
-
-	$ docker exec -ti mongo mongosniff
 
 To run a shell session:
 
