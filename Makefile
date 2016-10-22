@@ -1,4 +1,4 @@
-VERSION = 3.2.10-1
+VERSION = 3.2.10-3
 IMAGE = mvertes/alpine-mongo:$(VERSION)
 
 all:
