@@ -1,4 +1,12 @@
 #!/bin/sh
+
+# import any default data
+FILE="/data/db/default.json"
+if [ -e $FILE ]; then
+    echo "Importing $FILE"
+    mongoimport --file $FILE
+fi
+
 # Docker entrypoint (pid 1), run as root
 [ "$1" = "mongod" ] || exec "$@" || exit $?
 
