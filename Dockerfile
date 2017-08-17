@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 RUN \
-apk add --no-cache mongodb && \
+apk add --no-cache mongodb mongodb-tools && \
 rm /usr/bin/mongoperf
 
 VOLUME /data/db
