@@ -1,9 +1,10 @@
-# docker-alpine-mongo
+[![license_badge](https://img.shields.io/github/license/mvertes/docker-alpine-mongo.svg)](https://github.com/mvertes/docker-alpine-mongo/blob/master/LICENSE)
+[![docker_build_badge](https://img.shields.io/docker/automated/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
+[![docker_size_badge](https://img.shields.io/microbadger/image-size/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
+[![docker_pulls_badge](https://img.shields.io/docker/pulls/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
 
 This repository contains Dockerfile for [MongoDB 3.6](https://www.mongodb.org)
 container, based on the [Alpine edge](https://hub.docker.com/_/alpine/) image.
-
-Why ? the official mongo image size: 360 MB, alpine-mongo: 106 MB
 
 ## Install
 
