@@ -41,7 +41,7 @@ To use the mongo shell client:
 
 The mongo shell client can also be run its own container: 
 
-	$ docker run -ti --rm --name mongoshell monogo host:port/db
+	$ docker run -ti --rm --name mongoshell mongo host:port/db
 
 ## Limitations
 
