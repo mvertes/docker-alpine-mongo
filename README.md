@@ -3,7 +3,7 @@
 [![idocker_image_badge](https://images.microbadger.com/badges/image/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
 [![docker_pulls_badge](https://img.shields.io/docker/pulls/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
 
-This repository contains Dockerfile for [MongoDB 3.6](https://www.mongodb.org)
+This repository contains Dockerfile for [MongoDB 4.0](https://www.mongodb.org)
 container, based on the [Alpine edge](https://hub.docker.com/_/alpine/) image.
 
 ## Install

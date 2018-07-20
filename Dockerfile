@@ -1,8 +1,6 @@
 FROM alpine:edge
 
-RUN \
-apk add --no-cache mongodb && \
-rm /usr/bin/mongoperf
+RUN apk add --no-cache mongodb
 
 VOLUME /data/db
 EXPOSE 27017 28017
