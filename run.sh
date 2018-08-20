@@ -4,6 +4,7 @@
 
 # Make sure that database is owned by user mongodb
 [ "$(stat -c %U /data/db)" = mongodb ] || chown -R mongodb /data/db
+[ "$(stat -c %U /data/db)" = mongodb ] || chown -R mongodb /data/dump
 
 # Drop root privilege (no way back), exec provided command as user mongodb
 cmd=exec; for i; do cmd="$cmd '$i'"; done
