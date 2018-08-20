@@ -35,6 +35,11 @@ To run a shell session:
 
     $ docker exec -ti mongo sh
 
+To dump data runing in mongo shell:
+
+    $ docker exec -ti mongo sh
+    $ mongodump -o /data/dump
+
 To use the mongo shell client:
 
 	$ docker exec -ti mongo mongo
@@ -42,6 +47,24 @@ To use the mongo shell client:
 The mongo shell client can also be run its own container: 
 
 	$ docker run -ti --rm --name mongoshell mongo host:port/db
+
+## Sample docker-compose setting:
+
+```
+version: "3"
+services:
+  mgdb:
+    image: mvertes/alpine-mongo
+    volumes:
+      - "./data:/data/db"
+      - "./dump:/data/dump"
+    restart: always
+		# If you want auth start, you can add that arg.
+    # command: [ "mongod", "--bind_ip", "0.0.0.0", "--auth" ]
+    command: [ "mongod", "--bind_ip", "0.0.0.0" ]
+    ports:
+      - 27017:27017
+```
 
 ## Limitations
 
