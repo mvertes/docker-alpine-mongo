@@ -1,0 +1,25 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    id: "image"
+    entrypoint: sh
+    args:
+      - -c
+      - |
+        docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
+          --build-arg VERSION=COMMIT-$SHORT_SHA \
+          -t "eu.gcr.io/$PROJECT_ID/node-alpine-mongo:latest" \
+          -t "eu.gcr.io/$PROJECT_ID/node-alpine-mongo:$SHORT_SHA" .
+          
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: sh
+    args:
+      - -c
+      - |
+        if [ "$BRANCH_NAME" = "master" ]
+        then
+          docker push eu.gcr.io/$PROJECT_ID/node-alpine-mongo:latest
+          docker push eu.gcr.io/$PROJECT_ID/node-alpine-mongo:$SHORT_SHA
+        else
+          echo "Not pushing images for branch $BRANCH_NAME"
+        fi
+        echo done
