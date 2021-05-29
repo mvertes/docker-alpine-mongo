@@ -1,3 +1,5 @@
+**This project is now archived. Development has stopped since mongodb has been removed from alpinelinux packages due to SPL license.**
+
 [![license_badge](https://img.shields.io/github/license/mvertes/docker-alpine-mongo.svg)](https://github.com/mvertes/docker-alpine-mongo/blob/master/LICENSE)
 [![docker_build_badge](https://img.shields.io/docker/automated/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
 [![idocker_image_badge](https://images.microbadger.com/badges/image/mvertes/alpine-mongo.svg)](https://hub.docker.com/r/mvertes/alpine-mongo/)
